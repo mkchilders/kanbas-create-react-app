@@ -8,10 +8,7 @@
     padding: 7px;
     font-size: 0.8em;  
     text-align: center;
-  }
-  .wd-kanbas-navigation li.wd-active {
-    background-color: white;
-    color: rgb(200,16,46);
+    width: 80px;
   }
   .wd-kanbas-navigation a {
     color: white;
@@ -26,4 +23,9 @@
     position: fixed;
     left: 0px;
     top: 0;
+  }
+
+  .wd-kanbas-navigation li.wd-active {
+    background-color: white;
+    color: rgb(200,16,46);
   }
