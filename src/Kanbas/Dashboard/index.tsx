@@ -5,11 +5,11 @@ function Dashboard() {
   return (
     <div className="p-4">
       <h1>Dashboard</h1>              <hr />
-      <h2>Published Courses (12)</h2> <hr />
+      <h2>Published Courses (5)</h2> <hr />
       <div className="row">
-        <div className="row row-cols-1 row-cols-md-5 g-4">
+        <div className="row row-cols-1 row-cols-md-5 g-4 mt-0">
           {courses.map((course) => (
-            <div key={course._id} className="col" style={{ width: 300 }}>
+            <div key={course._id} className="col" style={{ width: 280 }}>
               <div className="card">
                 <img src={`/images/${course.image}`} className="card-img-top" alt=""
                      style={{ height: 150, objectFit: "cover" }}/>
