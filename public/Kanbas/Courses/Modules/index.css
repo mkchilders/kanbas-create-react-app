@@ -55,6 +55,7 @@ li.wd-secondary > a {
 
 .btn.btn-danger {
   background-color: rgb(200,16,46);
+  border-color: rgb(200, 16, 46);
 }
 
 .btn.btn-danger:hover {

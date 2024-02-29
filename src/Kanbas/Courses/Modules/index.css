@@ -52,10 +52,12 @@ li.wd-secondary > a {
 
 .btn.btn-danger {
   background-color: rgb(200,16,46);
+  border-color: rgb(200,16,46);
 }
 
 .btn.btn-danger:hover {
   background-color: rgb(153, 12, 36);
+  border-color: rgb(153, 12, 36);
 }
 
 .wd-module-link {

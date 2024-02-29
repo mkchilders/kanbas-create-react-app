@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useParams } from "react-router-dom";
 import CourseNavigation from "./Navigation";
 import './index.css';
 import TopNavigation from "./TopNavigation";
@@ -6,15 +6,16 @@ import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
 
-function Courses() {
+function Courses({ courses }: any) {
+  const { courseId } = useParams();
+  const course = courses.find((course: any) => course._id === courseId);
   return (
     <>
-        <TopNavigation />
+        <TopNavigation course={course} />
 
         <hr className="mt-0 mb-4 me-2"/>
-        <div className="overflow-y-scroll position-sticky">
-          <CourseNavigation />
-        </div>
+
+        <CourseNavigation />
         
         <div
           className="overflow-y-scroll position-fixed bottom-0 end-0"

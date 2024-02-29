@@ -1,12 +1,9 @@
 import { HiMiniBars3, HiEye } from "react-icons/hi2";
 import './index.css';
 import { useLocation, useParams } from "react-router";
-import { courses } from "../../../Kanbas/Database";
 
-const TopNavigation = () => {
-    const { courseId } = useParams();
+const TopNavigation = ({course} : any) => {
     const { pathname } = useLocation();
-    const course = courses.find((course) => course._id === courseId);
     const location = pathname.split('/').pop();
     return (
         <nav className="navbar navbar-light my-2 container-fluid">
