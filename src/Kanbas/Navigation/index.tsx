@@ -16,7 +16,7 @@ function KanbasNavigation() {
   ];
   const { pathname } = useLocation();
   return (
-    <ul className="wd-kanbas-navigation sticky-top vh-100">
+    <ul className="wd-kanbas-navigation sticky-top vh-100 d-none d-md-block">
       <a href="http://northeastern.edu">
         <li><img width="60px" src="/images/northeastern-logo.png" alt=""/></li>
       </a>

@@ -13,22 +13,19 @@ function Courses({ courses }: any) {
     <>
         <TopNavigation course={course} />
 
-        <hr className="mt-0 mb-4 me-2"/>
-
-        <CourseNavigation />
-        
-        <div
-          className="overflow-y-scroll position-fixed bottom-0 end-0"
-          style={{ left: "280px", top: "95px" }} >
-          <Routes>
-            <Route path="/" element={<Navigate to="Home" />} />
-            <Route path="Home" element={<Home />} />
-            <Route path="Modules" element={<Modules />} />
-            <Route path="Piazza" element={<h1>Piazza</h1>} />
-            <Route path="Assignments" element={<Assignments />} />
-            <Route path="Assignments/:assignmentId" element={<h1>Assignment Editor</h1>} />
-            <Route path="Grades" element={<h1>Grades</h1>} />
-          </Routes>
+        <div className="d-flex">
+          <CourseNavigation />
+          <div className="flex-grow-1 px-2">
+            <Routes>
+              <Route path="/" element={<Navigate to="Home" />} />
+              <Route path="Home" element={<Home />} />
+              <Route path="Modules" element={<Modules />} />
+              <Route path="Piazza" element={<h1>Piazza</h1>} />
+              <Route path="Assignments" element={<Assignments />} />
+              <Route path="Assignments/:assignmentId" element={<h1>Assignment Editor</h1>} />
+              <Route path="Grades" element={<h1>Grades</h1>} />
+            </Routes>
+          </div>
         </div>
     </>
   );

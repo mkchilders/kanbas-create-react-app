@@ -5,14 +5,16 @@ function CourseNavigation() {
   const { pathname } = useLocation();
   const { courseId } = useParams();
   return (
-    <ul className="wd-navigation">
-      <ul className="wd-nav-header wd-navigation">{courseId} Spring 2024 Semester Full Term</ul>
-      {links.map((link, index) => (
-        <li key={index} className={pathname.includes(link) ? "wd-active" : ""}>
-          <Link to={link}>{link}</Link>
-        </li>
-      ))}
-    </ul>
+    <>
+      <ul className="wd-navigation d-none d-md-block me-3">
+        <ul className="wd-nav-header wd-navigation">{courseId} Spring 2024 Semester Full Term</ul>
+        {links.map((link, index) => (
+          <li key={index} className={pathname.includes(link) ? "wd-active" : ""}>
+            <Link to={link}>{link}</Link>
+          </li>
+        ))}
+      </ul>
+    </>
   );
 }
 export default CourseNavigation;

@@ -70,10 +70,13 @@ function ModuleList() {
           <li
             className="list-group-item"
             onClick={() => setSelectedModule(module)}>
-            <div>
-              <FaEllipsisV className="me-3" />
-              {module.name}
-              <span className="float-end">
+            <div className="d-flex justify-content-between flex-wrap">
+              <span className="my-1">
+                <FaEllipsisV className="me-3" />
+                {module.name}
+              </span>
+
+              <span className="mt-1">
                 <button className="wd-module-edit btn btn-outline-primary p-0 pe-1 ps-1 me-2" onClick={() => dispatch(setModule(module))}>
                   Edit
                 </button>
