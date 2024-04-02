@@ -1,12 +1,12 @@
 import React from "react";
 import { FaCheckCircle, FaEllipsisV, FaPlusCircle, FaRegEdit } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
-import { assignments } from "../../Database";
+// import { assignments } from "../../Database";
 import "./index.css";
 function Assignments() {
   const { courseId } = useParams();
-  const assignmentList = assignments.filter(
-    (assignment) => assignment.course === courseId);
+  // const assignmentList = assignments.filter(
+  //   (assignment) => assignment.course === courseId);
   return (
     <>
       {/* {<!-- Add buttons and other fields here -->} */}
@@ -21,7 +21,7 @@ function Assignments() {
             </span>
           </div>
           <ul className="list-group">
-            {assignmentList.map((assignment) => (
+            {/* {assignmentList.map((assignment) => (
               <li className="list-group-item d-flex flex-row">
                 <FaEllipsisV className="me-3 mb-1 mt-2" />
                 <FaRegEdit className="text-success me-3 mb-1 mt-2" />
@@ -43,7 +43,7 @@ function Assignments() {
                   <FaCheckCircle className="text-success me-3" />
                   <FaEllipsisV />
                 </span>
-              </li>))}
+              </li>))} */}
           </ul>
         </li>
       </ul>
