@@ -15,11 +15,11 @@ function ModuleList() {
   const { courseId } = useParams();
   const [modules, setModules] = useState<Module[]>([]);
   const [module, setModule] = useState<Module>({
-    _id: "",
-    id: "",
+    _id: new Date().getTime().toString(),
+    id: new Date().getTime().toString(),
     name: "New Module",
     description: "New Description",
-    course: "",
+    course: courseId ? courseId : "",
     lessons: [{ id: "", name: "", description: "", module: "" }],
   });
   const fetchModules = async () => {
@@ -50,8 +50,7 @@ function ModuleList() {
     try {
       const status = await client.updateModule(module);
       setModules(modules.map((m) => (m._id === module._id ? module : m)));
-    }
-    catch (err) {
+    } catch (err) {
       console.log(err);
     }
   };
